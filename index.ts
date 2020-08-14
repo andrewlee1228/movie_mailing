@@ -3,8 +3,8 @@ import nodemailer from 'nodemailer'
 import { config } from 'dotenv'
 config()
 
-const CURRENT_MOVIES_URL = 'https://movie.naver.com/movie/running/current.nhn'
-const FUTURE_MOVIES_URL = 'https://movie.naver.com/movie/running/premovie.nhn'
+const CURRENT_MOVIES_URL = 'https://m.stock.naver.com/item/main.nhn#/stocks/337930/total'
+const FUTURE_MOVIES_URL = 'https://m.stock.naver.com/item/main.nhn#/stocks/337930/price'
 const now = Date.now()
 
 const takeScreenshots = async () => {
@@ -59,7 +59,7 @@ const sendEmail = async () => {
     },
   })
 
-  const to = ['ysm0622@gmail.com']
+  const to = ['guilefuldes@gmail.com']
 
   const mailOptions = {
     from: process.env.GMAIL_ID,
